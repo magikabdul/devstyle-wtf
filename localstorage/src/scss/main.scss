@@ -49,6 +49,13 @@ body {
       min-width: 200px;
       font-weight: 600px;
       letter-spacing: 0.5px;
+      &--load {
+         background: white;
+         transition: background 0.3s linear;
+         &:hover {
+            background: #d3d4d8;
+         }
+      }
       &--save {
          background: #121232;
          color: white;
