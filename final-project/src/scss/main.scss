@@ -12,6 +12,9 @@ html {
    box-sizing: border-box;
    font-size: 16px;
    scroll-behavior: smooth;
+   @media (max-width: $mobile) {
+      font-size: 10px;
+   }
 }
 
 *,
@@ -25,9 +28,13 @@ body {
    background: white;
    font-family: 'Poppins', sans-serif;
    border: 16px solid $big-stone;
+   @media (max-width: $mobile) {
+      border: none;
+   }
 }
 
 .container {
-   max-width: 1184px;
+   max-width: 1216px;
+   padding: 0 16px;
    margin: 0 auto;
 }

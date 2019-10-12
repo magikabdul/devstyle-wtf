@@ -14,8 +14,8 @@
       margin: 0 auto 1rem;
       font-style: normal;
       font-weight: 600;
-      padding: 1rem 0;
-      max-width: 1184px;
+      padding: 1rem 16px;
+      max-width: 1216px;
    }
 }
 
@@ -27,6 +27,9 @@
    margin: 0;
    padding: 0;
    list-style-type: none;
+   @media (max-width: $mobile) {
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+   }
 }
 
 .project {
@@ -62,7 +65,7 @@
          position: relative;
          &::after {
             content: '';
-            height: 32px;
+            height: 2rem;
             width: 2px;
             background: $athens-gray;
             position: absolute;

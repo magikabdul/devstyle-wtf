@@ -1,5 +1,6 @@
 .skills {
-   max-width: 1184px;
+   max-width: 1216px;
+   padding: 0 16px;
    margin: 0 auto 8rem;
    &__title {
       font-size: 2.25rem;
@@ -8,6 +9,9 @@
       font-weight: 600;
       padding: 1rem 0;
       border-bottom: 2px solid $athens-gray;
+      @media (max-width: $mobile) {
+         text-align: center;
+      }
    }
 }
 
@@ -15,10 +19,16 @@
    display: grid;
    padding: 8rem 0 0;
    grid-template-columns: 1fr 1fr;
+   column-gap: 0.5rem;
+   @media (max-width: $mobile) {
+      grid-template-columns: 1fr;
+      padding: 5rem 0 0;
+   }
    &__item {
       color: $shuttle-gray;
       padding: 11px 0 11px 30px;
       position: relative;
+      padding-left: 20px;
       &::before {
          content: '';
          display: block;
@@ -29,16 +39,21 @@
          top: 11px;
          left: 0;
          .skills-list__purple & {
-            background: url('../assets/img/ok_violet.svg');
+            background-image: url('../assets/img/ok_violet.svg');
          }
          .skills-list__blue & {
-            background: url('../assets/img/ok_blue.svg');
+            background-image: url('../assets/img/ok_blue.svg');
+         }
+         @media (max-width: $mobile) {
+            width: 11px;
+            height: 11px;
+            background-size: contain;
          }
       }
    }
    &__list {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(auto-fill, minmax(580px, 1fr));
       list-style-type: none;
       padding: 0;
       margin-top: calc(1.5rem + 4px);
